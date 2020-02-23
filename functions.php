@@ -20,7 +20,7 @@ require_once 'library/functions/editor-style.php';
 -------------------------------------------------*/
 require 'library/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://raw.githubusercontent.com/TurtleBuild/azami/master/azami/library/update-json/azami-update.json',
+    'https://raw.githubusercontent.com/TurtleBuild/azami/master/library/update-json/azami-update.json',
     __FILE__,
     'AZAMI'
 );
