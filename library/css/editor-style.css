@@ -1,0 +1,320 @@
+/*-------------------------------------------------
+オプションスタイルの定義
+（記事編集画面のクラシックエディタにて適用されます）
+-------------------------------------------------*/
+
+
+/*
+文字
+-------------------------------------------------*/
+
+/* 大きめの文字 */
+body#tinymce.wp-editor .text--large {
+  font-size: 1.2rem;
+}
+
+/* 色付き文字 */
+body#tinymce.wp-editor .text--red {
+  color: #d5848b;
+}
+body#tinymce.wp-editor .text--green {
+  color: #77c0c9;
+}
+body#tinymce.wp-editor .text--blue {
+  color: #66b7ec;
+}
+
+/* マーカー */
+body#tinymce.wp-editor .marker--pink {
+  background: linear-gradient(transparent 75%, #ffc1e0 75%);
+}
+body#tinymce.wp-editor .marker--green {
+  background: linear-gradient(transparent 75%, #66FFCC 75%);
+}
+body#tinymce.wp-editor .marker--blue {
+  background: linear-gradient(transparent 75%, #66ccff 75%);
+}
+
+/*
+見出し
+-------------------------------------------------*/
+body#tinymce.wp-editor p.azami-heading {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+body#tinymce.wp-editor .border--red:not(.h-bdr-b--changed):not(.h-stripe) {
+  border-color: #d5848b;
+}
+body#tinymce.wp-editor .border--green:not(.h-bdr-b--changed):not(.h-stripe) {
+  border-color: #77c0c9;
+}
+body#tinymce.wp-editor .border--blue:not(.h-bdr-b--changed):not(.h-stripe) {
+  border-color: #66b7ec;
+}
+
+/* 下線 */
+body#tinymce.wp-editor .h-border {
+  border-bottom: solid 2px #546e7a;
+}
+
+/* 色が変わる下線 */
+body#tinymce.wp-editor .h-bdr-b--changed {
+  position: relative;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #DDE2E6;
+}
+body#tinymce.wp-editor .h-bdr-b--changed::after {
+  background-color: #546e7a;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: 2;
+  content: '';
+  width: 20%;
+  height: 4px;
+}
+body#tinymce.wp-editor .h-bdr-b--changed.border--red::after {
+  background-color: #d5848b;
+}
+body#tinymce.wp-editor .h-bdr-b--changed.border--green::after {
+  background-color: #77c0c9;
+}
+body#tinymce.wp-editor .h-bdr-b--changed.border--blue::after {
+  background-color: #66b7ec;
+}
+
+/* 左線 */
+body#tinymce.wp-editor .h-border--left {
+  padding: 0.25rem 0 0.5rem 0.75rem;
+  border-left: solid 6px #546e7a;
+  background-color: #EFF1F5;
+}
+body#tinymce.wp-editor .h-border--left.border--red {
+  background-color: #FFEEEE;
+}
+body#tinymce.wp-editor .h-border--left.border--green {
+  background-color: #CAF3E7;
+}
+body#tinymce.wp-editor .h-border--left.border--blue {
+  background-color: #DDEEFF;
+}
+
+/* 色が変わる左線 */
+body#tinymce.wp-editor .h-bdr-l--changed {
+  position: relative;
+  padding: 0.25rem 0 0.5rem 0.75rem;
+  border-left: 6px solid #77c0c9;
+  background-color: #F8F9FA;
+}
+body#tinymce.wp-editor .h-bdr-l--changed::before {
+  position: absolute;
+  left: -6px;
+  bottom: 0;
+  content: '';
+  width: 6px;
+  height: 50%;
+  background-color: #6C757D;
+}
+body#tinymce.wp-editor .h-bdr-l--changed::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 0;
+}
+
+/* 上下線 */
+body#tinymce.wp-editor .h-border--topbot {
+  border-top: solid 2px #546e7a;
+  border-bottom: solid 2px #546e7a;
+}
+
+/* 二重下線 */
+body#tinymce.wp-editor .h-border--double {
+  border-bottom: double #546e7a;
+}
+
+/*
+点線下線
+-------------------------------------------------*/
+body#tinymce.wp-editor .h-border--dashed {
+  border-bottom: dashed 2px #546e7a;
+}
+/* 縞模様の下線 */
+body#tinymce.wp-editor .h-stripe {
+  position: relative;
+  padding: 0.3em 0;
+}
+body#tinymce.wp-editor .h-stripe::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #546e7a,
+    #546e7a 2px,
+    #fff 2px,
+    #fff 4px
+  );
+  background: repeating-linear-gradient(
+    -45deg,
+    #546e7a,
+    #546e7a 2px,
+    #fff 2px,
+    #fff 4px
+  );
+}
+body#tinymce.wp-editor .h-stripe.border--red::after {
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #d5848b,
+    #d5848b 2px,
+    #fff 2px,
+    #fff 4px
+  );
+  background: repeating-linear-gradient(
+    -45deg,
+    #d5848b,
+    #d5848b 2px,
+    #fff 2px,
+    #fff 4px
+  );
+}
+body#tinymce.wp-editor .h-stripe.border--green::after {
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #77c0c9,
+    #77c0c9 2px,
+    #fff 2px,
+    #fff 4px
+  );
+  background: repeating-linear-gradient(
+    -45deg,
+    #77c0c9,
+    #77c0c9 2px,
+    #fff 2px,
+    #fff 4px
+  );
+}
+body#tinymce.wp-editor .h-stripe.border--blue::after {
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #66b7ec,
+    #66b7ec 2px,
+    #fff 2px,
+    #fff 4px
+  );
+  background: repeating-linear-gradient(
+    -45deg,
+    #66b7ec,
+    #66b7ec 2px,
+    #fff 2px,
+    #fff 4px
+  );
+}
+
+/*
+ボックス
+-------------------------------------------------*/
+body#tinymce.wp-editor .azami-box {
+  background-color: #EFF1F5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+body#tinymce.wp-editor .azami-box p {
+  margin: 0;
+}
+body#tinymce.wp-editor .box--green {
+  background-color: #F4FFFC !important;
+  border-color: #32BCB9 !important;
+}
+body#tinymce.wp-editor .box--blue {
+  background-color: #F3FBFF !important;
+  border-color: #6CBCDF !important;
+}
+body#tinymce.wp-editor .box--pink {
+  background-color: #FBEDF2 !important;
+  border-color: #FFA9B8 !important;
+}
+body#tinymce.wp-editor .box--orange {
+  background-color: #FAE3DB !important;
+  border-color: #FB8971 !important;
+}
+
+/* シンプルなボックス */
+body#tinymce.wp-editor .simple-box {
+  border: solid 2px #546e7a;
+}
+
+/* 上下線ボックス */
+body#tinymce.wp-editor .topbot-border-box {
+  border-top: solid 2px #546e7a;
+  border-bottom: solid 2px #546e7a;
+}
+
+/* 上線ボックス */
+body#tinymce.wp-editor .top-border-box {
+  border-top: solid 4px #546e7a;
+}
+
+/* 左線ボックス */
+body#tinymce.wp-editor .left-border-box {
+  border-left: solid 4px #546e7a;
+}
+
+/* 二重線ボックス */
+body#tinymce.wp-editor .double-border-box {
+  border: double #546e7a;
+}
+
+/* 点線ボックス */
+body#tinymce.wp-editor .dashed-border-box {
+  border: dashed 2px #546e7a;
+}
+
+/*
+ボタン
+-------------------------------------------------*/
+body#tinymce.wp-editor .azami-button {
+  font-weight: bold;
+  background-color: #546e7a;
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+body#tinymce.wp-editor .azami-button.arrow::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f061";
+  font-size: 0.9rem;
+  padding-left: 0.75rem;
+}
+body#tinymce.wp-editor .button--red {
+  background-color: #d5848b;
+}
+body#tinymce.wp-editor .button--green {
+  background-color: #77c0c9;
+}
+body#tinymce.wp-editor .button--blue {
+  background-color: #66b7ec;
+}
+
+/* 立体的なボタン */
+body#tinymce.wp-editor .azami-button.button--cubic {
+  border-bottom: solid 3px rgba(0, 0, 0, 0.27);
+}
+
+/* ピル型のボタン */
+body#tinymce.wp-editor .azami-button.button--circle {
+  padding: 0.5rem 1.5rem;
+  border-radius: 40px;
+}
