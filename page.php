@@ -12,7 +12,7 @@ if( $post->ID == get_option('main_visual_1col_pageID') ) { get_template_part('li
         <p><?php the_post_thumbnail( 'medium', array('class' => 'webfeedsFeaturedVisual img-thumbnail') );?></p>
       <?php endif; ?>
     </header>
-    <section>
+    <section class="article-content">
       <?php
         the_content();
         wp_link_pages();
