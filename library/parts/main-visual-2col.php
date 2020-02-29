@@ -2,7 +2,7 @@
 /*-------------------------------------------------
 メインビジュアルの表示（2カラム）
 -------------------------------------------------*/
-  if( get_option('main_visual_2col_checkbox') && get_option('main_visual_2col_img') ) :
+  if( get_option('main_visual_2col_img') ) :
     $imgurl = esc_url( get_option('main_visual_2col_img') );
     $main_visual_h = get_option('main_visual_2col_heading');
     $main_visual_d = get_option('main_visual_2col_text');

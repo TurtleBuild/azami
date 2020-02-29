@@ -2,7 +2,7 @@
 /*-------------------------------------------------
 メインビジュアルの表示（Bootstrapを使用）
 -------------------------------------------------*/
-  if( get_option('main_visual_1col_checkbox') &&  get_option('main_visual_img_1') ) :
+  if( get_option('main_visual_img_1') ) :
 ?>
 <style>
   .main-visual-1 h2 { color: <?php echo get_theme_mod('main_visual_heading_1_color', '#77c0c9'); ?>; }
