@@ -5,7 +5,7 @@ Text Domain: azami
 Theme URI: https://github.com/TurtleBuild/azami
 Description: https://azami.turtlebuild.com
 Author: Masahiro Kasatani
-Version: 1.0.3
+Version: 1.0.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 - 基本スタイル
@@ -348,10 +348,16 @@ PCヘッダー，PCメニュー
   font-size: 1rem;
 }
 
+/* 見出し */
+.article-content h2,
+.article-content .h2 {
+  margin-top: 4rem;
+}
+
 /* リスト */
 .article-content ul,
 .article-content ol {
-  padding: 1rem 1rem 1rem 2.5rem;
+  padding: 0 1rem 1rem 2.5rem;
 }
 .article-content ul {
   list-style-type: disc;
@@ -556,7 +562,8 @@ pre code::before {
 目次
 -------------------------------------------------*/
 #ez-toc-container {
-  margin: 1rem 0 2rem;
+  max-width: 700px;
+  margin: 1rem auto 2rem;
   padding: 1rem 2.5rem 1.5rem;
   background-color: #F8F9FA;
   border: solid 1px #DDE2E6;
