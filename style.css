@@ -5,7 +5,7 @@ Text Domain: azami
 Theme URI: https://github.com/TurtleBuild/azami
 Description: https://azami.turtlebuild.com
 Author: Masahiro Kasatani
-Version: 1.0.4
+Version: 1.0.5
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 - 基本スタイル
@@ -1599,4 +1599,75 @@ ul.popular-posts li a {
 }
 #recentcomments a {
   padding: 0;
+}
+
+/* TODO ウィジェットにしたい */
+/* プロフィール */
+.profile-card{
+  width: 100%;
+  max-width:400px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,.18);
+  overflow: hidden;
+}
+
+.profile-card:before{
+ width:120%;
+ height:100px;
+ content:"";
+ transform:skew(15deg,10deg);
+ background: #77C0C9;
+ position:  absolute;
+ top:-15%;
+ left:-10%;
+ z-index: 0;
+}
+
+.profile-card__inner{
+ position: relative;
+}
+
+.profile-thumb{
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border: #fff 3px solid;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background: #fff;
+}
+
+.profile-thumb img{
+  display: block;
+    width: 100%;
+    height: auto;
+}
+
+.profile-content{
+  padding: 15px;
+}
+
+.profile-content span{
+  display: block;
+}
+
+.profile-name{
+  margin-bottom: 3px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-job{
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 12px;
+  text-align: center;
+}
+
+.profile-intro{
+  font-size: 12px;
+  text-align: center;
 }
